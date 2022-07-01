@@ -14,8 +14,10 @@ export class TasksService {
     return createdTask.save();
   }
 
-  findAll() {
-    return this.taskModel.find().exec();
+  find(search) {
+    return this.taskModel.find({
+      content: { $regex: search ?? '', $options: 'i' },
+    });
   }
 
   findOne(id: string) {
