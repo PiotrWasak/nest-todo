@@ -9,7 +9,7 @@ import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://admin:N0kBKllZ4CYERpOO@cluster0.zp9ap.mongodb.net/?retryWrites=true&w=majority',
+      'mongodb://root:2EpCUN70FapCKSMlVUVZ10shIUh5Udl8KJZEb95f2rHEIIhZ3fUUaNfQ32ihapS7@uwo48g8sg4c8s00ww404w84c:27017/?directConnection=true',
     ),
     TasksModule,
     AuthModule,
